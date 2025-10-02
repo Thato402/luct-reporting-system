@@ -1,0 +1,279 @@
+:root {
+  --luct-primary: #2C3E50;
+  --luct-secondary: #E74C3C;
+  --luct-accent: #3498DB;
+  --luct-light: #ECF0F1;
+}
+
+/* Global styles */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main content area - takes all available space and pushes footer to bottom */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Footer styles - At bottom of page content */
+.footer-custom {
+  background-color: #000000;
+  color: white;
+  padding: 20px 0;
+  width: 100%;
+  margin-top: auto; /* This pushes it to the bottom */
+}
+
+/* Navbar styles */
+.navbar-custom {
+  background-color: var(--luct-primary);
+}
+
+.navbar-brand-custom {
+  font-weight: 700;
+  color: white !important;
+}
+
+.btn-luct {
+  background-color: var(--luct-secondary);
+  color: white;
+  border: none;
+}
+
+.btn-luct:hover {
+  background-color: #c0392b;
+  color: white;
+}
+
+.card-custom {
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  height: 100%;
+}
+
+.card-custom:hover {
+  transform: translateY(-5px);
+}
+
+.module-icon {
+  font-size: 2.5rem;
+  color: var(--luct-accent);
+  margin-bottom: 15px;
+}
+
+.login-container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.report-form-container {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
+.role-badge {
+  background-color: var(--luct-accent);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+.hero-section {
+  background: linear-gradient(to right, #2C3E50, #4CA1AF);
+  color: white;
+  padding: 80px 0;
+  flex: 1; /* Take remaining space */
+  display: flex;
+  align-items: center;
+}
+
+/* Enhanced logout styles */
+.btn-logout {
+  background: linear-gradient(45deg, #dc3545, #c82333);
+  border: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-logout:hover {
+  background: linear-gradient(45deg, #c82333, #bd2130);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(220, 53, 69, 0.4);
+}
+
+/* User dropdown enhancements */
+.dropdown-menu {
+  border: none;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  border-radius: 10px;
+}
+
+.dropdown-item {
+  border-radius: 5px;
+  margin: 2px 8px;
+  width: auto;
+}
+
+.dropdown-item:hover {
+  background-color: #f8f9fa;
+}
+
+/* Modal enhancements */
+.modal-content {
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+.modal-header {
+  border-radius: 15px 15px 0 0;
+}
+
+/* Navbar user info */
+.navbar-user-info {
+  background: rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 5px 15px;
+  margin-right: 10px;
+}
+
+.navbar-user-info:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .navbar-nav .btn {
+    width: 100%;
+    margin: 5px 0;
+  }
+  
+  .logout-btn-mobile {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+/* Hover effects for cards */
+.action-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  border-color: var(--luct-accent);
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Gradient backgrounds */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, var(--luct-primary) 0%, var(--luct-accent) 100%);
+}
+
+/* Hover lift effect */
+.hover-lift {
+  transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-3px);
+}
+
+/* Animation for logout modal */
+.modal.fade.show {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Role-specific color coding */
+.role-student { border-left: 4px solid #28a745; }
+.role-lecturer { border-left: 4px solid #007bff; }
+.role-principal_lecturer { border-left: 4px solid #6f42c1; }
+.role-program_leader { border-left: 4px solid #fd7e14; }
+
+/* Badge animations */
+.badge {
+  transition: all 0.3s ease;
+}
+
+.badge:hover {
+  transform: scale(1.05);
+}
+
+/* Rating specific styles */
+.rating-stars {
+  color: #ffc107;
+  font-size: 1.2em;
+}
+
+.rating-progress {
+  height: 8px;
+}
+
+.rating-card {
+  border-left: 4px solid #ffc107;
+}
+
+.btn-rating {
+  background: linear-gradient(45deg, #ffc107, #ff8c00);
+  border: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-rating:hover {
+  background: linear-gradient(45deg, #ff8c00, #ff6b00);
+  transform: translateY(-2px);
+}
+
+/* Ensure content takes full height */
+.container {
+  flex: 1;
+}
+
+/* Make sure dashboard and other pages take full height */
+.dashboard-container,
+.reports-container,
+.classes-container,
+.courses-container,
+.lecturers-container,
+.monitoring-container,
+.rating-container {
+  flex: 1;
+  padding-bottom: 20px;
+}
