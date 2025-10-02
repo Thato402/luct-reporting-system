@@ -11,7 +11,15 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middleware
-app.use(cors());
+// Update CORS configuration
+app.use(cors({
+  origin: [
+    'http://localhost:3000',
+    'https://yourusername.github.io', // Your GitHub Pages URL
+    'https://yourusername.github.io/luct-reporting-system' // If using project site
+  ],
+  credentials: true
+}));
 app.use(express.json());
 
 // PostgreSQL connection with better error handling
