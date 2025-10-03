@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "description": "Frontend for LUCT Reporting System",
   "main": "src/index.js",
-   "homepage": "https://<Thato402>.github.io/luct-reporting-app",
-   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
-  },
+   "homepage": ".","scripts": {
+  "start": "react-scripts start",
+  "build": "react-scripts build",
+  "test": "react-scripts test",
+  "eject": "react-scripts eject"
+},
+
   "keywords": [
     "react",
     "luct",
