@@ -1,5 +1,10 @@
 const API_BASE_URL = 'http://localhost:5000/api';
 
+const api = axios.create({
+  baseURL: process.env.REACT_APP_API_URL || "https://your-backend.up.railway.app"
+});
+
+
 class ApiService {
   constructor() {
     this.token = localStorage.getItem('token');
